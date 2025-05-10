@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IT Project - Уведомление</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			line-height: 1.6;
+			color: #333;
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #f9f9f9;
+		}
+		.header {
+			background-color: #4a6baf;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			border-radius: 5px 5px 0 0;
+		}
+		.content {
+			background-color: white;
+			padding: 25px;
+			border-radius: 0 0 5px 5px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		}
+		.footer {
+			margin-top: 20px;
+			font-size: 12px;
+			color: #777;
+			text-align: center;
+		}
+		.message {
+			background-color: #f5f5f5;
+			padding: 15px;
+			border-left: 4px solid #4a6baf;
+			margin: 20px 0;
+		}
+		.info-item {
+			margin-bottom: 10px;
+		}
+		.info-label {
+			font-weight: bold;
+			color: #4a6baf;
+		}
+		.logo {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="logo">IT Project</div>
+	<div>Уведомление</div>
+</div>
+
+<div class="content">
+	<div class="info-item">
+		<span class="info-label">Клиент:</span>
+		<span>{{userName}}</span>
+	</div>
+
+	<div class="info-item">
+		<span class="info-label">Адрес электронной почты:</span>
+		<span>{{userEmail}}</span>
+	</div>
+
+	<div class="info-item">
+		<span class="info-label">Дата:</span>
+		<span>{{currentDate}}</span>
+	</div>
+
+	<div class="message">
+		{{messageContent}}
+	</div>
+</div>
+
+<div class="footer">
+	<p>Это письмо отправлено автоматически. Пожалуйста, не отвечайте на него.</p>
+	<p>&copy; {{currentYear}} IT Project. Все права защищены.</p>
+</div>
+</body>
+</html>
